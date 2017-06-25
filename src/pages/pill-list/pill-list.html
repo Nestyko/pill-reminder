@@ -1,0 +1,22 @@
+<!--
+  Generated template for the PillListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pill List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+		<button ion-item *ngFor="let pill of pills$ | async" >
+			{{pill.name}}
+		</button>
+	</ion-list>
+</ion-content>
