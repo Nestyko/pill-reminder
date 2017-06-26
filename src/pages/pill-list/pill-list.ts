@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NgRedux, select } from '@angular-redux/store'
 import { Observable } from 'rxjs'
+import {CreatePillPage} from '../create-pill/create-pill'
 
 
 /**
@@ -21,6 +22,10 @@ export class PillListPage {
   	public navCtrl: NavController, 
   	public navParams: NavParams,
   	private ngRedux: NgRedux<any>) {
+  }
+
+  goToCreatePill(){
+    this.navCtrl.push(CreatePillPage)
   }
 
   @select("pills") pills$ : Observable<Array<any>>

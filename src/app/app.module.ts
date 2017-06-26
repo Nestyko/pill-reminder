@@ -11,9 +11,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PillListPage } from '../pages/pill-list/pill-list';
+import { CreatePillPage } from '../pages/create-pill/create-pill'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PillFormComponent } from '../components/pill-form/pill-form';
 
 
 
@@ -25,7 +27,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    PillListPage
+    PillListPage,
+    CreatePillPage,
+    PillFormComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    PillListPage
+    PillListPage,
+    CreatePillPage
   ],
   providers: [
     StatusBar,
