@@ -18,6 +18,21 @@
     <ion-label>Name</ion-label>
     <ion-input [(ngModel)]="pill.name" type="text"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label>Take Every</ion-label>
+    <ion-input [(ngModel)]="pill.takeEvery" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Time Unit</ion-label>
+    <ion-select [(ngModel)]="pill.unit">
+      <ion-option value="month">Month</ion-option>
+      <ion-option value="w">Week</ion-option>
+      <ion-option value="d">Day</ion-option>
+      <ion-option value="h">Hour</ion-option>
+      <ion-option value="min">Minute</ion-option>
+    </ion-select>
+  </ion-item>
 
   <div padding>
     <button

@@ -16,7 +16,7 @@
 <ion-content padding>
 	<ion-list>
 		<button ion-item *ngFor="let pill of pills$ | async" >
-			{{pill.name}}
+			{{pill.name}} <span class="item-right-info" >every {{pill.takeEvery}}{{pill.unit}}</span>
 		</button>
 	</ion-list>
   <ion-fab class="bottom right" >

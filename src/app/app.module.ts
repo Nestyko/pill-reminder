@@ -17,7 +17,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PillFormComponent } from '../components/pill-form/pill-form';
 
-
+//Globals
+import "moment"
+import "moment-duration-format"
 
 
 @NgModule({

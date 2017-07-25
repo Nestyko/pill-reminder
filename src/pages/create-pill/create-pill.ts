@@ -16,13 +16,15 @@ import {NgRedux} from '@angular-redux/store'
 export class CreatePillPage {
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    private ngRedux: NgRedux<any>) {
+    private ngRedux: NgRedux<IState>) {
   }
 
-  pill = {
-    name: ""
+  pill : Pill = {
+    name: "",
+    takeEvery: 8,
+    unit: "h"
   }
 
   ionViewDidLoad() {
@@ -30,7 +32,11 @@ export class CreatePillPage {
   }
 
   savePill(pill){
-    this.ngRedux.dispatch({type: "CREATE_PILL", payload: pill})
+    const action = {
+      type: "CREATE_PILL",
+      payload: pill
+    }
+    this.ngRedux.dispatch(action)
     this.navCtrl.pop()
   }
 

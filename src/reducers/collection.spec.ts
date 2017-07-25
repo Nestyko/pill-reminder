@@ -1,4 +1,4 @@
-import reducer from './collection'
+import {collectionReducer as reducer} from './collection'
 
 describe("Reducer for Collection like state", () => {
   const item1 = {

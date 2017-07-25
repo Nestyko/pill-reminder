@@ -9,7 +9,10 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "@angular-redux/store": "^6.5.4",
@@ -27,6 +30,9 @@
     "@ionic/storage": "2.0.1",
     "ionic-angular": "3.4.2",
     "ionicons": "3.0.0",
+    "moment": "^2.18.1",
+    "moment-duration-format": "^1.3.0",
+    "ramda": "^0.24.1",
     "redux": "^3.7.0",
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
@@ -34,8 +40,15 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.3.7",
-    "@ionic/cli-plugin-ionic-angular": "1.3.1",
+    "@ionic/cli-plugin-ionic-angular": "1.3.2",
+    "@types/jest": "^20.0.4",
+    "jest": "^20.0.4",
+    "jest-preset-angular": "^2.0.5",
     "typescript": "2.3.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts"
+  }
 }
