@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {NgRedux} from '@angular-redux/store'
+import {DbService} from "../../services/db"
 
 /**
  * Generated class for the CreatePillPage page.
@@ -18,7 +19,8 @@ export class CreatePillPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private ngRedux: NgRedux<IState>) {
+    private ngRedux: NgRedux<IState>,
+    private db: DbService) {
   }
 
   pill : Pill = {

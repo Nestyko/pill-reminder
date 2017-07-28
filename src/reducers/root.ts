@@ -1,21 +1,11 @@
 import {combineReducers} from "redux"
 import { collectionReducer } from "./collection"
-
+import {pillReducer} from "./pill"
 
 export const initialState = {
-	pills: [
-	{
-		name: "ibuprofen"
-	},{
-		name: "tantum"
-	},{
-		name: "acetaminofen"
-	},{
-		name: "deslorat"
-	}
-	]
+	pills: []
 }
 
 export const rootReducer = combineReducers({
-	pills : collectionReducer("PILL")
+	pills : pillReducer
 })
